@@ -86,9 +86,3 @@ county_fips2 %>%
 write.csv(state_cases, "state_cases.csv",row.names=FALSE)
 write.csv(county_cases, "county_cases.csv",row.names=FALSE)
 
-test <- county_fips2 %>% 
-  anti_join(county_cases, by=c("id" = "id")) %>% 
-  select(id)
-
-county_cases %>% filter(id == 02016)
-
