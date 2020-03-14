@@ -39,18 +39,9 @@
 </head>
 <body>
     <div class="viz"></div>
-    <script type="text/javascript" src="//d3js.org/d3.v5.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.7.0/d3.min.js"></script>
     <script type="text/javascript" src="https://d3js.org/topojson.v3.min.js"></script>
     <script type="text/javascript">
-
-        var x = d3.scaleLinear()
-            .domain([1, 10])
-            .rangeRound([600, 860]);
-
-        var color = d3.scaleThreshold()
-            .domain(d3.range(0, 9))
-            .range(d3.schemeBlues[9]);
-
         var margin = {
             top: 10,
             bottom: 10,
@@ -63,6 +54,7 @@
             , active = d3.select(null);
 
         var svg = d3.select('.viz').append('svg')
+            .attr('class', 'center-container')
             .attr('height', height + margin.top + margin.bottom)
             .attr('width', width + margin.left + margin.right);
 
@@ -72,20 +64,12 @@
             .attr('width', width + margin.left + margin.right)
             .on('click', clicked);
 
-        Promise.resolve(d3.json("https://gist.githubusercontent.com/mbostock/4090846/raw/d534aba169207548a8a3d670c9c2cc719ff05c47/us.json")
-        ).then(ready)
+         var promises = [
+         d3.json('https://d3js.org/us-10m.v2.json'),
+         d3.csv("county_cases.csv", function(d) { county_cases.set(d.cid, +d.crate); }),
+         d3.csv("state_cases.csv", function(d) { state_cases.set(d.sid, +d.srate); })
+        ]  
 
-        var promises = [
-        d3.tsv("us-state-names.tsv", function(d) {
-            stateNames.set(d.id, d.name)
-        }),
-        d3.tsv("us-county-names.tsv", function(d) {
-            countyNames.set(d.id, d.name)
-        }),
-        d3.tsv("cases.tsv", function(d) { 
-            cases.set(d.name, +d.value); 
-        })
-        ]
         Promise.all(promises).then(ready)
 
         var projection = d3.geoAlbersUsa()
@@ -104,29 +88,28 @@
         function ready(us) {
 
             g.append("g")
-                .attr("id", "counties")
+                .attr("class", "counties")
                 .selectAll("path")
                 .data(topojson.feature(us, us.objects.counties).features)
                 .enter().append("path")
+                .attr("fill", function(d) { return color(d.crate = county_cases.get(d.sid)); })
                 .attr("d", path)
-                .attr('fill', color(2))
                 .attr("class", "county-boundary")
                 .on("click", reset);
 
             g.append("g")
-                .attr("id", "states")
+                .attr("class", "states")
                 .selectAll("path")
                 .data(topojson.feature(us, us.objects.states).features)
                 .enter().append("path")
+                .attr("fill", function(d) { return color(d.srate = state_cases.get(d.cid)); })
                 .attr("d", path)
-                .attr('fill', color(1))
                 .attr("class", "state")
                 .on("click", clicked);
 
-
             g.append("path")
                 .datum(topojson.mesh(us, us.objects.states, function(a, b) { return a !== b; }))
-                .attr("id", "state-borders")
+                .attr("class", "state-borders")
                 .attr("d", path);
 
         }
