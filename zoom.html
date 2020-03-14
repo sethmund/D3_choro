@@ -66,8 +66,8 @@
 
          var promises = [
          d3.json('https://d3js.org/us-10m.v2.json'),
-         d3.csv("county_cases.csv", function(d) { county_cases.set(d.cid, +d.crate); }),
-         d3.csv("state_cases.csv", function(d) { state_cases.set(d.sid, +d.srate); })
+         d3.csv("county_cases.csv", function(d) { county_cases.set(d.id, +d.rate); }),
+         d3.csv("state_cases.csv", function(d) { state_cases.set(d.id, +d.rate); })
         ]  
 
         Promise.all(promises).then(ready)
@@ -92,7 +92,7 @@
                 .selectAll("path")
                 .data(topojson.feature(us, us.objects.counties).features)
                 .enter().append("path")
-                .attr("fill", function(d) { return color(d.crate = county_cases.get(d.sid)); })
+                .attr("fill", function(d) { return color(d.rate = county_cases.get(d.id)); })
                 .attr("d", path)
                 .attr("class", "county-boundary")
                 .on("click", reset);
@@ -102,7 +102,7 @@
                 .selectAll("path")
                 .data(topojson.feature(us, us.objects.states).features)
                 .enter().append("path")
-                .attr("fill", function(d) { return color(d.srate = state_cases.get(d.cid)); })
+                .attr("fill", function(d) { return color(d.rate = state_cases.get(d.id)); })
                 .attr("d", path)
                 .attr("class", "state")
                 .on("click", clicked);
