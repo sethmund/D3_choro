@@ -23,59 +23,31 @@ var svg = d3.select("svg"),
     width = +svg.attr("width"),
     height = +svg.attr("height");
 
-var unemployment = d3.map();
-var stateNames = d3.map();
+var county_cases = d3.map();
 
 var path = d3.geoPath();
 
 var color = d3.scaleThreshold()
-.domain([0, 10, 50, 100, 200, 300, 500])
+.domain([0, 1,5, 10, 20, 50, 100, 150])
     .range(d3.schemeOranges[9]);
 
-
-var g = svg.append("g")
-    .attr("class", "key")
-    .attr("transform", "translate(0,40)");
-
-
 var promises = [
-  d3.json("https://d3js.org/us-10m.v1.json"),
-  d3.csv("us-state-names.csv", function(d) {
-    StateNames.set(d.id, d.name)
-  }),
-  d3.csv("state_map.csv", function(d) { 
-    console.log("d in map", d);
-    unemployment.set(d.name, +d.value); 
-  })
+  d3.json("https://d3js.org/us-10m.v2.json"),
+  d3.csv("county_cases.csv", function(d) { county_cases.set(d.id, +d.rate); })
 ]
-console.log("before promises")
+
 Promise.all(promises).then(ready)
 
 function ready([us]) {
-
   svg.append("g")
-      .attr("class", "states")
+      .attr("class", "counties")
     .selectAll("path")
-    .data(topojson.feature(us, us.objects.states).features)
+    .data(topojson.feature(us, us.objects.counties).features)
     .enter().append("path")
-      .attr("fill", function(d) { 
-          var sn = StateNames.get(d.id)
-          d.rate = unemployment.get(StateNames.get(d.id)) || 0
-          console.log("rate", d.rate)
-          var col =  color(d.rate); 
-          console.log("col", col)
-          if (col) {
-            console.log("found col", col, "for d", d)
-            return col
-          } else {
-            return '#ffffff'
-          }
-      })
+      .attr("fill", function(d) { return color(d.rate = county_cases.get(d.id)); })
       .attr("d", path)
     .append("title")
-      .text(function(d) { 
-    			console.log("title", d)
-    			return d.rate + " cases"; });
+      .text(function(d) { return d.rate; });
 
   svg.append("path")
       .datum(topojson.mesh(us, us.objects.states, function(a, b) { return a !== b; }))

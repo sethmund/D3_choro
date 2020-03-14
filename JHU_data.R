@@ -40,12 +40,8 @@ counties <-  dat %>%
 
 #FIPS=====================================================================
 
-county_fips <- read.csv("https://raw.githubusercontent.com/kjhealy/fips-codes/master/state_and_county_fips_master.csv") 
-county_fips2 <- read_tsv("https://gist.githubusercontent.com/adamjanes/6cf85a4fd79e122695ebde7d41fe327f/raw/7040d66840468cbb1a81de2cd7a2138df7e02928/unemployment.tsv")
-library(maps)
-county_fips3 <- read_tsv("fips.tsv")
-
-county_fips <- read_tsv("fips.tsv")%>% 
+state_fips <- read.csv("https://raw.githubusercontent.com/kjhealy/fips-codes/master/state_and_county_fips_master.csv") %>% 
+  filter(is.na(state)) %>% 
   select(id = fips,
          name,
          state) %>% 
@@ -55,20 +51,44 @@ county_fips <- read_tsv("fips.tsv")%>%
          id = case_when(grepl("000", id) ~ str_sub(id, end=-4),
          TRUE ~ id))
 
-#write.csv(county_fips, "county_fips.csv",row.names=FALSE)
 
-county_fips <- read.csv("county_fips.csv")
+county_fips <- read_xls("fips_codes_website.xls") %>% select(code=1,stfips=2,cfips=3,name=6,type=7) %>% 
+  filter(type %in% c("Borough","County","Parish","Township","CDP","TDSA")) %>% 
+  transmute(id = paste0(stfips,cfips),
+            code,
+            name)
 
-state_cases <- county_fips %>% filter(is.na(state)) %>% 
+state_cases <- state_fips %>% 
   left_join(states, by= c("name" = "state")) %>% 
-  select(-state)
+  select(-state,-name, rate=cases)
 
-county_cases <- county_fips %>% filter(!is.na(state)) %>% 
-      left_join(counties, by= c("name" = "county","state" = "state")) %>% 
-      select(-state,-name,rate=cases) %>% 
+county_cases <- county_fips %>% 
+      left_join(counties, by= c("name" = "county","code" = "state")) %>% 
+      select(-code,-name,rate=cases) %>% 
   mutate(rate = case_when(is.na(rate) ~ 0,
                           TRUE ~ as.numeric(rate)))
 
+
+#==============================================================================
+
+library(data.table)
+
+county_fips2 <- read_tsv("https://gist.githubusercontent.com/arunmallya/7131805ec108166dc5b9cdefd6fbca21/raw/ae84404e913e297b1fd0d5006ed33049b5067c96/unemployment.tsv")
+
+county_cases <- county_cases %>% rbind(
+
+county_fips2 %>% 
+  anti_join(county_cases, by=c("id" = "id")) %>% 
+  select(id) %>% 
+  mutate(rate = 0)
+)
+
 write.csv(state_cases, "state_cases.csv",row.names=FALSE)
 write.csv(county_cases, "county_cases.csv",row.names=FALSE)
+
+test <- county_fips2 %>% 
+  anti_join(county_cases, by=c("id" = "id")) %>% 
+  select(id)
+
+county_cases %>% filter(id == 02016)
 
