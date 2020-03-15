@@ -1,5 +1,5 @@
 "id","name","cases"
-"01","Alabama",5
+"01000","Alabama",5
 "01001","Autauga, AL",0
 "01003","Baldwin, AL",0
 "01005","Barbour, AL",0
@@ -67,7 +67,7 @@
 "01129","Washington, AL",0
 "01131","Wilcox, AL",0
 "01133","Winston, AL",0
-"02","Alaska",1
+"02000","Alaska",1
 "02013","Aleutians East Borough, AK",0
 "02016","Aleutians West Census Area, AK",0
 "02020","Anchorage Municipality, AK",0
@@ -97,7 +97,7 @@
 "02275","Wrangell City And Borough, AK",0
 "02282","Yakutat City And Borough, AK",0
 "02290","Yukon-Koyukuk Census Area, AK",0
-"04","Arizona",33
+"04000","Arizona",33
 "04001","Apache, AZ",0
 "04003","Cochise, AZ",0
 "04005","Coconino, AZ",0
@@ -113,7 +113,7 @@
 "04023","Santa Cruz, AZ",0
 "04025","Yavapai, AZ",0
 "04027","Yuma, AZ",0
-"05","Arkansas",13
+"05000","Arkansas",13
 "05001","Arkansas, AR",0
 "05003","Ashley, AR",0
 "05005","Baxter, AR",0
@@ -189,7 +189,7 @@
 "05145","White, AR",0
 "05147","Woodruff, AR",0
 "05149","Yell, AR",0
-"06","California",824
+"06000","California",824
 "06001","Alameda, CA",10
 "06003","Alpine, CA",0
 "06005","Amador, CA",0
@@ -248,7 +248,7 @@
 "06111","Ventura, CA",0
 "06113","Yolo, CA",4
 "06115","Yuba, CA",0
-"08","Colorado",143
+"08000","Colorado",143
 "08001","Adams, CO",0
 "08003","Alamosa, CO",0
 "08005","Arapahoe, CO",0
@@ -313,7 +313,7 @@
 "08121","Washington, CO",0
 "08123","Weld, CO",0
 "08125","Yuma, CO",0
-"09","Connecticut",21
+"09000","Connecticut",21
 "09001","Fairfield, CT",0
 "09003","Hartford, CT",0
 "09005","Litchfield, CT",0
@@ -322,13 +322,13 @@
 "09011","New London, CT",0
 "09013","Tolland, CT",0
 "09015","Windham, CT",0
-"10","Delaware",6
+"10000","Delaware",6
 "10001","Kent, DE",0
 "10003","New Castle, DE",0
 "10005","Sussex, DE",0
-"11","District Of Columbia",0
+"11000","District Of Columbia",0
 "11001","District Of Columbia, DC",0
-"12","Florida",128
+"12000","Florida",128
 "12001","Alachua, FL",0
 "12003","Baker, FL",0
 "12005","Bay, FL",0
@@ -396,7 +396,7 @@
 "12129","Wakulla, FL",0
 "12131","Walton, FL",0
 "12133","Washington, FL",0
-"13","Georgia",113
+"13000","Georgia",113
 "13001","Appling, GA",0
 "13003","Atkinson, GA",0
 "13005","Bacon, GA",0
@@ -556,13 +556,13 @@
 "13317","Wilkes, GA",0
 "13319","Wilkinson, GA",0
 "13321","Worth, GA",0
-"15","Hawaii",8
+"15000","Hawaii",8
 "15001","Hawaii, HI",0
 "15003","Honolulu, HI",3
 "15005","Kalawao, HI",0
 "15007","Kauai, HI",0
 "15009","Maui, HI",0
-"16","Idaho",1
+"16000","Idaho",1
 "16001","Ada, ID",0
 "16003","Adams, ID",0
 "16005","Bannock, ID",0
@@ -607,7 +607,7 @@
 "16083","Twin Falls, ID",0
 "16085","Valley, ID",0
 "16087","Washington, ID",0
-"17","Illinois",115
+"17000","Illinois",115
 "17001","Adams, IL",0
 "17003","Alexander, IL",0
 "17005","Bond, IL",0
@@ -710,7 +710,7 @@
 "17199","Williamson, IL",0
 "17201","Winnebago, IL",0
 "17203","Woodford, IL",0
-"18","Indiana",43
+"18000","Indiana",43
 "18001","Adams, IN",0
 "18003","Allen, IN",0
 "18005","Bartholomew, IN",0
@@ -803,7 +803,7 @@
 "18179","Wells, IN",0
 "18181","White, IN",0
 "18183","Whitley, IN",0
-"19","Iowa",54
+"19000","Iowa",54
 "19001","Adair, IA",0
 "19003","Adams, IA",0
 "19005","Allamakee, IA",0
@@ -903,7 +903,7 @@
 "19193","Woodbury, IA",0
 "19195","Worth, IA",0
 "19197","Wright, IA",0
-"20","Kansas",8
+"20000","Kansas",8
 "20001","Allen, KS",0
 "20003","Anderson, KS",0
 "20005","Atchison, KS",0
@@ -1009,7 +1009,7 @@
 "20205","Wilson, KS",0
 "20207","Woodson, KS",0
 "20209","Wyandotte, KS",0
-"21","Kentucky",38
+"21000","Kentucky",38
 "21001","Adair, KY",0
 "21003","Allen, KY",0
 "21005","Anderson, KY",0
@@ -1130,7 +1130,7 @@
 "21235","Whitley, KY",0
 "21237","Wolfe, KY",0
 "21239","Woodford, KY",0
-"22","Louisiana",62
+"22000","Louisiana",62
 "22001","Acadia Parish, LA",0
 "22003","Allen Parish, LA",0
 "22005","Ascension Parish, LA",0
@@ -1195,7 +1195,7 @@
 "22123","West Carroll Parish, LA",0
 "22125","West Feliciana Parish, LA",0
 "22127","Winn Parish, LA",0
-"23","Maine",1
+"23000","Maine",1
 "23001","Androscoggin, ME",0
 "23003","Aroostook, ME",0
 "23005","Cumberland, ME",0
@@ -1212,7 +1212,7 @@
 "23027","Waldo, ME",0
 "23029","Washington, ME",0
 "23031","York, ME",0
-"24","Maryland",47
+"24000","Maryland",47
 "24001","Allegany, MD",0
 "24003","Anne Arundel, MD",0
 "24005","Baltimore, MD",0
@@ -1237,7 +1237,7 @@
 "24045","Wicomico, MD",0
 "24047","Worcester, MD",0
 "24510","Baltimore City, MD",0
-"25","Massachusetts",418
+"25000","Massachusetts",418
 "25001","Barnstable, MA",0
 "25003","Berkshire, MA",2
 "25005","Bristol, MA",0
@@ -1252,7 +1252,7 @@
 "25023","Plymouth, MA",0
 "25025","Suffolk, MA",56
 "25027","Worcester, MA",0
-"26","Michigan",20
+"26000","Michigan",20
 "26001","Alcona, MI",0
 "26003","Alger, MI",0
 "26005","Allegan, MI",0
@@ -1336,7 +1336,7 @@
 "26161","Washtenaw, MI",0
 "26163","Wayne, MI",0
 "26165","Wexford, MI",0
-"27","Minnesota",31
+"27000","Minnesota",31
 "27001","Aitkin, MN",0
 "27003","Anoka, MN",0
 "27005","Becker, MN",0
@@ -1424,7 +1424,7 @@
 "27169","Winona, MN",0
 "27171","Wright, MN",0
 "27173","Yellow Medicine, MN",0
-"28","Mississippi",2
+"28000","Mississippi",2
 "28001","Adams, MS",0
 "28003","Alcorn, MS",0
 "28005","Amite, MS",0
@@ -1507,7 +1507,7 @@
 "28159","Winston, MS",0
 "28161","Yalobusha, MS",0
 "28163","Yazoo, MS",0
-"29","Missouri",5
+"29000","Missouri",5
 "29001","Adair, MO",0
 "29003","Andrew, MO",0
 "29005","Atchison, MO",0
@@ -1623,7 +1623,7 @@
 "29227","Worth, MO",0
 "29229","Wright, MO",0
 "29510","St. Louis City, MO",0
-"30","Montana",3
+"30000","Montana",3
 "30001","Beaverhead, MT",0
 "30003","Big Horn, MT",0
 "30005","Blaine, MT",0
@@ -1680,7 +1680,7 @@
 "30107","Wheatland, MT",0
 "30109","Wibaux, MT",0
 "30111","Yellowstone, MT",0
-"31","Nebraska",31
+"31000","Nebraska",31
 "31001","Adams, NE",0
 "31003","Antelope, NE",0
 "31005","Arthur, NE",0
@@ -1774,7 +1774,7 @@
 "31181","Webster, NE",0
 "31183","Wheeler, NE",0
 "31185","York, NE",0
-"32","Nevada",42
+"32000","Nevada",42
 "32001","Churchill, NV",0
 "32003","Clark, NV",7
 "32005","Douglas, NV",0
@@ -1792,7 +1792,7 @@
 "32031","Washoe, NV",6
 "32033","White Pine, NV",0
 "32510","Carson City, NV",0
-"33","New Hampshire",21
+"33000","New Hampshire",21
 "33001","Belknap, NH",0
 "33003","Carroll, NH",0
 "33005","Cheshire, NH",0
@@ -1803,7 +1803,7 @@
 "33015","Rockingham, NH",2
 "33017","Strafford, NH",0
 "33019","Sullivan, NH",0
-"34","New Jersey",96
+"34000","New Jersey",96
 "34001","Atlantic, NJ",0
 "34003","Bergen, NJ",16
 "34005","Burlington, NJ",0
@@ -1825,7 +1825,7 @@
 "34037","Sussex, NJ",0
 "34039","Union, NJ",0
 "34041","Warren, NJ",0
-"35","New Mexico",18
+"35000","New Mexico",18
 "35001","Bernalillo, NM",0
 "35003","Catron, NM",0
 "35005","Chaves, NM",0
@@ -1859,7 +1859,7 @@
 "35057","Torrance, NM",0
 "35059","Union, NM",0
 "35061","Valencia, NM",0
-"36","New York",1142
+"36000","New York",1142
 "36001","Albany, NY",0
 "36003","Allegany, NY",0
 "36005","Bronx, NY",0
@@ -1922,7 +1922,7 @@
 "36119","Westchester, NY",286
 "36121","Wyoming, NY",0
 "36123","Yates, NY",0
-"37","North Carolina",46
+"37000","North Carolina",46
 "37001","Alamance, NC",0
 "37003","Alexander, NC",0
 "37005","Alleghany, NC",0
@@ -2023,7 +2023,7 @@
 "37195","Wilson, NC",0
 "37197","Yadkin, NC",0
 "37199","Yancey, NC",0
-"38","North Dakota",2
+"38000","North Dakota",2
 "38001","Adams, ND",0
 "38003","Barnes, ND",0
 "38005","Benson, ND",0
@@ -2077,7 +2077,7 @@
 "38101","Ward, ND",0
 "38103","Wells, ND",0
 "38105","Williams, ND",0
-"39","Ohio",25
+"39000","Ohio",25
 "39001","Adams, OH",0
 "39003","Allen, OH",0
 "39005","Ashland, OH",0
@@ -2166,7 +2166,7 @@
 "39171","Williams, OH",0
 "39173","Wood, OH",0
 "39175","Wyandot, OH",0
-"40","Oklahoma",8
+"40000","Oklahoma",8
 "40001","Adair, OK",0
 "40003","Alfalfa, OK",0
 "40005","Atoka, OK",0
@@ -2244,7 +2244,7 @@
 "40149","Washita, OK",0
 "40151","Woods, OK",0
 "40153","Woodward, OK",0
-"41","Oregon",88
+"41000","Oregon",88
 "41001","Baker, OR",0
 "41003","Benton, OR",0
 "41005","Clackamas, OR",0
@@ -2281,7 +2281,7 @@
 "41067","Washington, OR",31
 "41069","Wheeler, OR",0
 "41071","Yamhill, OR",0
-"42","Pennsylvania",91
+"42000","Pennsylvania",91
 "42001","Adams, PA",0
 "42003","Allegheny, PA",0
 "42005","Armstrong, PA",0
@@ -2349,13 +2349,13 @@
 "42129","Westmoreland, PA",0
 "42131","Wyoming, PA",0
 "42133","York, PA",0
-"44","Rhode Island",27
+"44000","Rhode Island",27
 "44001","Bristol, RI",0
 "44003","Kent, RI",0
 "44005","Newport, RI",0
 "44007","Providence, RI",20
 "44009","Washington, RI",0
-"45","South Carolina",42
+"45000","South Carolina",42
 "45001","Abbeville, SC",0
 "45003","Aiken, SC",0
 "45005","Allendale, SC",0
@@ -2402,7 +2402,7 @@
 "45087","Union, SC",0
 "45089","Williamsburg, SC",0
 "45091","York, SC",0
-"46","South Dakota",24
+"46000","South Dakota",24
 "46003","Aurora, SD",0
 "46005","Beadle, SD",0
 "46007","Bennett, SD",0
@@ -2469,7 +2469,7 @@
 "46129","Walworth, SD",0
 "46135","Yankton, SD",0
 "46137","Ziebach, SD",0
-"47","Tennessee",60
+"47000","Tennessee",60
 "47001","Anderson, TN",0
 "47003","Bedford, TN",0
 "47005","Benton, TN",0
@@ -2565,7 +2565,7 @@
 "47185","White, TN",0
 "47187","Williamson, TN",5
 "47189","Wilson, TN",0
-"48","Texas",104
+"48000","Texas",104
 "48001","Anderson, TX",0
 "48003","Andrews, TX",0
 "48005","Angelina, TX",0
@@ -2820,7 +2820,7 @@
 "48503","Young, TX",0
 "48505","Zapata, TX",0
 "48507","Zavala, TX",0
-"49","Utah",19
+"49000","Utah",19
 "49001","Beaver, UT",0
 "49003","Box Elder, UT",0
 "49005","Cache, UT",0
@@ -2850,7 +2850,7 @@
 "49053","Washington, UT",0
 "49055","Wayne, UT",0
 "49057","Weber, UT",0
-"50","Vermont",6
+"50000","Vermont",6
 "50001","Addison, VT",0
 "50003","Bennington, VT",2
 "50005","Caledonia, VT",0
@@ -2865,7 +2865,7 @@
 "50023","Washington, VT",0
 "50025","Windham, VT",0
 "50027","Windsor, VT",0
-"51","Virginia",63
+"51000","Virginia",63
 "51001","Accomack, VA",0
 "51003","Albemarle, VA",0
 "51005","Alleghany, VA",0
@@ -3000,7 +3000,7 @@
 "51820","Waynesboro City, VA",0
 "51830","Williamsburg City, VA",0
 "51840","Winchester City, VA",0
-"53","Washington",1643
+"53000","Washington",1643
 "53001","Adams, WA",0
 "53003","Asotin, WA",0
 "53005","Benton, WA",0
@@ -3040,7 +3040,7 @@
 "53073","Whatcom, WA",0
 "53075","Whitman, WA",0
 "53077","Yakima, WA",0
-"54","West Virginia",0
+"54000","West Virginia",0
 "54001","Barbour, WV",0
 "54003","Berkeley, WV",0
 "54005","Boone, WV",0
@@ -3096,7 +3096,7 @@
 "54105","Wirt, WV",0
 "54107","Wood, WV",0
 "54109","Wyoming, WV",0
-"55","Wisconsin",36
+"55000","Wisconsin",36
 "55001","Adams, WI",0
 "55003","Ashland, WI",0
 "55005","Barron, WI",0
@@ -3169,7 +3169,7 @@
 "55137","Waushara, WI",0
 "55139","Winnebago, WI",0
 "55141","Wood, WI",0
-"56","Wyoming",2
+"56000","Wyoming",2
 "56001","Albany, WY",0
 "56003","Big Horn, WY",0
 "56005","Campbell, WY",0
