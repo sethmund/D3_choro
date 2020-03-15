@@ -1,5 +1,6 @@
 library(tidyverse)
 library(tools)
+library(readxl)
 
 dat <- read.csv("https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Confirmed.csv")
 
@@ -70,8 +71,6 @@ county_cases <- county_fips %>%
 
 
 #==============================================================================
-
-library(data.table)
 
 county_fips2 <- read_tsv("https://gist.githubusercontent.com/arunmallya/7131805ec108166dc5b9cdefd6fbca21/raw/ae84404e913e297b1fd0d5006ed33049b5067c96/unemployment.tsv")
 
